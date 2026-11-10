@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Environment & Secrets (NEVER commit to version control)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Local / Backup / Broken OneDrive symlinks
+backup/
+test/
+test-amount.js
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / Output
+dist/
+build/
+coverage/
+
+# AI Agent metadata
+.agent/

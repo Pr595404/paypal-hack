@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPilot — AI Invoice-to-Cash Agent & FinTech Platform</title>
+  
+  <!-- PayPilot Custom FinTech Design System -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Chart.js for Financial Visualizations (Deferred / Async safe) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- jsPDF for Client-side PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Application Engine -->
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="top-header">
+    <div class="brand-container">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+        ☰
+      </button>
+      <div class="brand-logo-icon">P</div>
+      <div>
+        <div class="brand-name">PayPilot</div>
+        <div class="brand-tagline">AI Invoice-to-Cash Platform</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="demo-pill" title="Sandbox prototype mode with realistic simulated ledger">
+        <span class="pulse-dot"></span>
+        <span>DEMO MODE ACTIVE</span>
+      </div>
+      <a href="#new" class="btn btn-primary btn-sm">+ New Invoice</a>
+    </div>
+  </header>
+
+  <!-- App Body Layout -->
+  <div class="app-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item" id="nav-dashboard">
+          <span class="nav-item-icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#invoices" class="nav-item" id="nav-invoices">
+          <span class="nav-item-icon">📄</span>
+          <span>Invoices</span>
+        </a>
+        <a href="#new" class="nav-item" id="nav-new">
+          <span class="nav-item-icon">➕</span>
+          <span>Create Invoice</span>
+        </a>
+        <a href="#approvals" class="nav-item" id="nav-approvals">
+          <span class="nav-item-icon">🛡️</span>
+          <span>Approvals</span>
+          <span class="nav-badge" id="nav-approval-badge" style="display:none;">0</span>
+        </a>
+        <a href="#reminders" class="nav-item" id="nav-reminders">
+          <span class="nav-item-icon">🔔</span>
+          <span>Reminder Center</span>
+        </a>
+        <a href="#activity" class="nav-item" id="nav-activity">
+          <span class="nav-item-icon">📜</span>
+          <span>Audit Trail</span>
+        </a>
+        <a href="#settings" class="nav-item" id="nav-settings">
+          <span class="nav-item-icon">⚙️</span>
+          <span>Settings & Reset</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="font-weight: 600; color: var(--text-main);">PayPal Hackathon 2026</div>
+        <div style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.2rem;">Cross-Border Invoice Agent</div>
+      </div>
+    </aside>
+
+    <!-- Main Dynamic Application Container -->
+    <div class="main-wrapper">
+      <main id="app" class="main-content" role="main">
+        <!-- Rendered dynamically by script.js -->
+        <div style="padding: 3rem 1rem; text-align: center; color: var(--text-muted);">
+          <div style="font-size: 1.25rem; font-weight: 600; color: var(--primary);">Loading PayPilot Platform...</div>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem;">Initializing financial engine & secure demo ledger</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Reusable Toast Notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Reusable Modal Container -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-dialog" id="modal-dialog">
+      <!-- Modal Content Injected Dynamically -->
+    </div>
+  </div>
+</body>
+</html>
